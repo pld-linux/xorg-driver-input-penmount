@@ -1,12 +1,12 @@
 Summary:	X.org input driver for PenMount devices
 Summary(pl):	Sterownik wej¶ciowy X.org dla urz±dzeñ PenMount
 Name:		xorg-driver-input-penmount
-Version:	1.1.0
+Version:	1.2.0
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-penmount-%{version}.tar.bz2
-# Source0-md5:	aa0552fb893fd29868d6adc7b7a5d61b
+# Source0-md5:	0589f2eaa84afb9bd49b226ce7dacdda
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
