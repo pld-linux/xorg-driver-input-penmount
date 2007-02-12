@@ -1,5 +1,5 @@
 Summary:	X.org input driver for PenMount devices
-Summary(pl):	Sterownik wej¶ciowy X.org dla urz±dzeñ PenMount
+Summary(pl.UTF-8):   Sterownik wejÅ›ciowy X.org dla urzÄ…dzeÅ„ PenMount
 Name:		xorg-driver-input-penmount
 Version:	1.2.0
 Release:	0.1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X.org input driver for PenMount devices.
 
-%description -l pl
-Sterownik wej¶ciowy X.org dla urz±dzeñ PenMount.
+%description -l pl.UTF-8
+Sterownik wejÅ›ciowy X.org dla urzÄ…dzeÅ„ PenMount.
 
 %prep
 %setup -q -n xf86-input-penmount-%{version}
