@@ -1,31 +1,33 @@
 Summary:	X.org input driver for PenMount devices
 Summary(pl.UTF-8):	Sterownik wejściowy X.org dla urządzeń PenMount
 Name:		xorg-driver-input-penmount
-Version:	1.2.0
+Version:	1.2.1
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-penmount-%{version}.tar.bz2
-# Source0-md5:	0589f2eaa84afb9bd49b226ce7dacdda
+# Source0-md5:	268af4dceda544d8c815b9b7e87d4536
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
-BuildRequires:  rpmbuild(macros) >= 1.389
 %requires_xorg_xserver_xinput
 Requires:	xorg-xserver-server >= 1.0.99.901
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X.org input driver for PenMount devices.
+X.org input driver for PenMount devices. It supports DMC8910 and
+DMC9000.
 
 %description -l pl.UTF-8
-Sterownik wejściowy X.org dla urządzeń PenMount.
+Sterownik wejściowy X.org dla urządzeń PenMount. Obsługuje DMC8910 i
+DMC9000.
 
 %prep
 %setup -q -n xf86-input-penmount-%{version}
