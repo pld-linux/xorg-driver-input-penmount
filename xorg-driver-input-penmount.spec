@@ -1,24 +1,24 @@
 Summary:	X.org input driver for PenMount devices
 Summary(pl.UTF-8):	Sterownik wejściowy X.org dla urządzeń PenMount
 Name:		xorg-driver-input-penmount
-Version:	1.4.1
-Release:	2
+Version:	1.5.0
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-penmount-%{version}.tar.bz2
-# Source0-md5:	e5984e43ce31d45659eb6ee91c02aba5
+# Source0-md5:	b23d71e0b4159a6a4e81fdcef8b2e4f9
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	rpmbuild(macros) >= 1.389
 BuildRequires:	xorg-proto-inputproto-devel
 BuildRequires:	xorg-proto-randrproto-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
-BuildRequires:	xorg-xserver-server-devel >= 1.0.99.901
+BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xorg-xserver-server-devel >= 1.10
 %{?requires_xorg_xserver_xinput}
-Requires:	xorg-xserver-server >= 1.0.99.901
+Requires:	xorg-xserver-server >= 1.10
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -48,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/xorg/modules/*/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
